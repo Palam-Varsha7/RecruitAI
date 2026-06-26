@@ -1,0 +1,2 @@
+# The production ranker uses only the Python standard library.
+# Tested with Python 3.14 on Windows. Python 3.10+ should work.

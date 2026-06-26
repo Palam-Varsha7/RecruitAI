@@ -1,0 +1,51 @@
+team_name: "RecruitAI"
+
+primary_contact:
+  name: "TODO: Full Name"
+  email: "TODO: primary@example.com"
+  phone: "TODO: +91-XXXXXXXXXX"
+
+team_members:
+  - name: "TODO: Full Name"
+    email: "TODO: member@example.com"
+    role: "Builder"
+
+github_repo: "TODO: https://github.com/YOUR_USERNAME/RecruitAI"
+sandbox_link: "TODO: add HuggingFace Space, Streamlit Cloud, Replit, Colab, Docker, or Binder link"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Local Windows laptop"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.14"
+  os: "Windows"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "ChatGPT"
+
+ai_usage_summary: |
+  Used ChatGPT/Codex as an engineering assistant to inspect the dataset bundle,
+  implement and refine the deterministic offline ranker, draft documentation,
+  and generate the explanation deck. No candidate ranking step uses hosted LLM
+  calls or network access.
+
+methodology_summary: |
+  Deterministic CPU-only hybrid ranker for the Senior AI Engineer JD. It combines
+  title fit, production retrieval/ranking evidence, trusted skill strength,
+  product-company context, experience/location fit, and Redrob behavioral
+  availability. It explicitly downweights services-only careers, stale profiles,
+  side-project-only AI exposure, keyword-stuffed non-engineering profiles, and
+  honeypot-like impossible claims. The generated reasoning cites only facts from
+  each candidate profile.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

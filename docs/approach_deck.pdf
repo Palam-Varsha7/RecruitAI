@@ -1,0 +1,548 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+3 0 obj
+<< /Length 233 >>
+stream
+0.08 0.10 0.13 rg 0 0 792 612 re f
+0.00 0.55 0.50 rg 0 0 792 12 re f
+0.95 0.95 0.92 rg
+BT /F1 30 Tf 56 535 Td
+(RecruitAI v2: Intelligent Candidate Ranking System) Tj ET
+0.56 0.62 0.60 rg
+BT /F2 11 Tf 56 34 Td (RecruitAI | 1/11) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 25 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Length 687 >>
+stream
+0.08 0.10 0.13 rg 0 0 792 612 re f
+0.00 0.55 0.50 rg 0 0 792 12 re f
+0.95 0.95 0.92 rg
+BT /F1 30 Tf 56 535 Td
+(1. Problem Statement) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 473 Td
+(Recruiters miss strong candidates because keyword filters cannot reason about fit.) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 449 Td
+(The released JD is intentionally nuanced: it wants a founding Senior AI Engineer) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 425 Td
+(who has shipped search, retrieval, ranking, and evaluation systems in production,) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 401 Td
+(not someone who merely lists AI keywords.) Tj ET
+0.56 0.62 0.60 rg
+BT /F2 11 Tf 56 34 Td (RecruitAI | 2/11) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 25 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 1014 >>
+stream
+0.08 0.10 0.13 rg 0 0 792 612 re f
+0.00 0.55 0.50 rg 0 0 792 12 re f
+0.95 0.95 0.92 rg
+BT /F1 30 Tf 56 535 Td
+(2. Design Principles) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 473 Td
+(RecruitAI ranks like a skilled recruiter would:) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 449 Td
+(- **Reward demonstrated production ownership** over keyword matching) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 425 Td
+(- **Value product-company context** and startup experience) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 401 Td
+(- **Trust skills backed by endorsements and duration**, not just listed) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 377 Td
+(- **Consider actual availability** ? a perfect but unreachable candidate is) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 353 Td
+(  worthless) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 329 Td
+(- **Downweight stale, keyword-stuffed, consulting-only, or impossible) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 305 Td
+(  profiles**) Tj ET
+0.56 0.62 0.60 rg
+BT /F2 11 Tf 56 34 Td (RecruitAI | 3/11) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 25 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 2192 >>
+stream
+0.08 0.10 0.13 rg 0 0 792 612 re f
+0.00 0.55 0.50 rg 0 0 792 12 re f
+0.95 0.95 0.92 rg
+BT /F1 30 Tf 56 535 Td
+(3. Architecture Overview) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 473 Td
+(The system is a deterministic CPU-only hybrid ranker with 10 scoring components:) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 437 Td
+(???????????????????????????????????????????????????????????????????) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 417 Td
+(?                    Candidate Profile \(JSONL\)                     ?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 397 Td
+(???????????????????????????????????????????????????????????????????) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 377 Td
+(?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 357 Td
+(?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 337 Td
+(???????????????????????????????????????????????????????????????????) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 317 Td
+(?                    Feature Extraction Layer                      ?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 297 Td
+(?  ? Profile text aggregation \(headline, summary, titles, etc.\)   ?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 277 Td
+(?  ? Career history analysis \(companies, industries, descriptions\)?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 257 Td
+(?  ? Skills inventory with proficiency/endorsements/duration      ?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 237 Td
+(?  ? Education credentials \(field, degree, tier\)                  ?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 217 Td
+(?  ? Redrob behavioral signals \(activity, response, availability\) ?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 197 Td
+(???????????????????????????????????????????????????????????????????) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 177 Td
+(?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 157 Td
+(?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 137 Td
+(???????????????????????????????????????????????????????????????????) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 117 Td
+(?                    Scoring Components \(10 signals\)               ?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 97 Td
+(?  ???????????????????  ???????????????????  ??????????????????? ?) Tj ET
+0.56 0.62 0.60 rg
+BT /F2 11 Tf 56 34 Td (RecruitAI | 4/11) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 25 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 1844 >>
+stream
+0.08 0.10 0.13 rg 0 0 792 612 re f
+0.00 0.55 0.50 rg 0 0 792 12 re f
+0.95 0.95 0.92 rg
+BT /F1 30 Tf 56 535 Td
+(4. Deep JD Understanding) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 473 Td
+(The JD explicitly states what it means beyond the surface:) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 437 Td
+(| What the JD Says | What It Actually Means |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 413 Td
+(|------------------|------------------------|) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 389 Td
+(| "5-9 years" | Sweet spot but flexible; judgment > years |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 365 Td
+(| "Production ML systems" | Must have deployed, not just experimented |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 341 Td
+(| "Embeddings-based retrieval" | Hands-on with sentence-transformers, BGE, E5,) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 317 Td
+(etc. |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 293 Td
+(| "Vector databases" | Operational experience with Pinecone, Qdrant, Weaviate,) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 269 Td
+(Milvus, FAISS |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 245 Td
+(| "Evaluation frameworks" | NDCG, MRR, MAP, offline-to-online correlation, A/B) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 221 Td
+(tests |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 197 Td
+(| "Product-minded shipper" | Ships working systems, not just research |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 173 Td
+(| "Not research-only" | Pure academic/research backgrounds are disqualified |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 149 Td
+(| "Not LangChain tutorials" | Real ML production experience, not just GenAI) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 125 Td
+(wrappers |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 101 Td
+(| "Not services-only" | Consulting firm-only careers are risky |) Tj ET
+0.56 0.62 0.60 rg
+BT /F2 11 Tf 56 34 Td (RecruitAI | 5/11) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 25 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 1737 >>
+stream
+0.08 0.10 0.13 rg 0 0 792 612 re f
+0.00 0.55 0.50 rg 0 0 792 12 re f
+0.95 0.95 0.92 rg
+BT /F1 30 Tf 56 535 Td
+(5. Scoring Components Detail) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 473 Td
+(### 5.1 Title Score \(18%\)) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 449 Td
+(- Exact title matching against 30+ known relevant titles) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 425 Td
+(- Bonus for "search + ranking" combinations) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 401 Td
+(- Considers current title + last 3 roles) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 365 Td
+(### 5.2 Production Evidence \(28% ? highest weight\)) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 341 Td
+(- 40+ positive phrase patterns detecting real production experience) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 317 Td
+(- 12+ negative phrase patterns for disqualifying signals) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 293 Td
+(- Captures: "production ML systems", "hybrid retrieval", "BM25+dense",) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 269 Td
+(  "semantic search", "learning-to-rank", "NDCG/MRR", "A/B testing",) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 245 Td
+(  "evaluation framework", "shipped to production", "real-time ranking", "at) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 221 Td
+(  scale") Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 185 Td
+(### 5.3 Skills Score \(14%\)) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 161 Td
+(- 70+ target skills with relevance weights) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 137 Td
+(- Trust model: proficiency + endorsements + duration cross-validation) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 113 Td
+(- Penalty for impossible expertise \(expert with 0 endorsements, <6 months\)) Tj ET
+0.56 0.62 0.60 rg
+BT /F2 11 Tf 56 34 Td (RecruitAI | 6/11) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 25 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 1817 >>
+stream
+0.08 0.10 0.13 rg 0 0 792 612 re f
+0.00 0.55 0.50 rg 0 0 792 12 re f
+0.95 0.95 0.92 rg
+BT /F1 30 Tf 56 535 Td
+(6. Trap & Honeypot Resistance) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 473 Td
+(The ranker guards against:) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 437 Td
+(| Trap Type | Detection Method |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 413 Td
+(|-----------|------------------|) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 389 Td
+(| AI keyword stuffing | Non-engineering title + high skills score ? penalty |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 365 Td
+(| Side-project-only AI | "side project", "toy project", "experimenting with) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 341 Td
+(LangChain" patterns |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 317 Td
+(| Services-only career | All companies in known services list ? -0.32 score |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 293 Td
+(| Keyword-stuffer with no production | Many trusted skills + low production) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 269 Td
+(evidence ? penalty |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 245 Td
+(| Impossible skill durations | Expert proficiency with ?1 month duration ?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 221 Td
+(honeypot flag |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 197 Td
+(| Future dates | Signup/last_active > reference date ? penalty |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 173 Td
+(| Invalid career dates | Start date > end date ? penalty |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 149 Td
+(| Experience mismatch | Summary years vs profile years gap ?6 ? penalty |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 125 Td
+(| Too many zero-endorsement skills | ?15 skills with ?50% zero endorsements ?) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 101 Td
+(penalty |) Tj ET
+0.56 0.62 0.60 rg
+BT /F2 11 Tf 56 34 Td (RecruitAI | 7/11) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 25 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 1258 >>
+stream
+0.08 0.10 0.13 rg 0 0 792 612 re f
+0.00 0.55 0.50 rg 0 0 792 12 re f
+0.95 0.95 0.92 rg
+BT /F1 30 Tf 56 535 Td
+(7. Reasoning Generation) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 473 Td
+(Reasoning is generated from actual candidate profile fields:) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 449 Td
+(- **Specific facts**: Years of experience, location, current title) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 425 Td
+(- **Evidence labels**: Matched production patterns \(up to 3\)) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 401 Td
+(- **Top skills**: Highest-weighted target skills \(up to 3\)) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 377 Td
+(- **Availability signals**: Open-to-work, response rate, notice period, saves,) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 353 Td
+(  activity) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 329 Td
+(- **Concerns**: Long notice, not open-to-work, services-only, honeypot flags,) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 305 Td
+(  job-hopping) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 74 281 Td
+(- **Strengths**: Title labels, company types \(product/startup\)) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 245 Td
+(Each reasoning is unique to the candidate ? no templated text.) Tj ET
+0.56 0.62 0.60 rg
+BT /F2 11 Tf 56 34 Td (RecruitAI | 8/11) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 25 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 1009 >>
+stream
+0.08 0.10 0.13 rg 0 0 792 612 re f
+0.00 0.55 0.50 rg 0 0 792 12 re f
+0.95 0.95 0.92 rg
+BT /F1 30 Tf 56 535 Td
+(8. Constraints & Performance) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 473 Td
+(| Constraint | Limit | Our System |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 449 Td
+(|------------|-------|------------|) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 425 Td
+(| Runtime | ?5 minutes | ~30 seconds for 100K candidates |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 401 Td
+(| Memory | ?16 GB | <500 MB \(streaming + top-100 heap\) |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 377 Td
+(| Compute | CPU only | ? Pure Python, no GPU |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 353 Td
+(| Network | No external calls | ? Fully offline |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 329 Td
+(| Dependencies | None required | ? Standard library only |) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 305 Td
+(| Determinism | Required | ? Tie-breaking by candidate_id |) Tj ET
+0.56 0.62 0.60 rg
+BT /F2 11 Tf 56 34 Td (RecruitAI | 9/11) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 25 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 493 >>
+stream
+0.08 0.10 0.13 rg 0 0 792 612 re f
+0.00 0.55 0.50 rg 0 0 792 12 re f
+0.95 0.95 0.92 rg
+BT /F1 30 Tf 56 535 Td
+(9. Reproducibility) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 473 Td
+(Single command to reproduce:) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 449 Td
+(python rank.py --candidates ./candidates.jsonl --out ./submission.csv) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 13 Tf 56 429 Td
+(python validate_submission.py submission.csv) Tj ET
+0.56 0.62 0.60 rg
+BT /F2 11 Tf 56 34 Td (RecruitAI | 10/11) Tj ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 25 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 1704 >>
+stream
+0.08 0.10 0.13 rg 0 0 792 612 re f
+0.00 0.55 0.50 rg 0 0 792 12 re f
+0.95 0.95 0.92 rg
+BT /F1 30 Tf 56 535 Td
+(10. Key Differentiators vs Baseline Approaches) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 473 Td
+(1. **Semantic pattern matching** over keyword counting ? captures "connect users) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 449 Td
+(with relevant information" as relevance experience) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 425 Td
+(2. **Multi-signal integration** ? 10 scoring components, not just skills matching) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 401 Td
+(3. **Trust-weighted skills** ? endorsements + duration validate proficiency claims) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 377 Td
+(4. **Industry-aware company scoring** ? distinguishes product vs services at) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 353 Td
+(industry level) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 329 Td
+(5. **Career trajectory analysis** ? rewards progression, penalizes job-hopping) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 305 Td
+(6. **Availability-aware ranking** ? unreachable candidates are downweighted) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 281 Td
+(7. **Honeypot resistance** ? 7 different impossibility checks) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 257 Td
+(8. **Grounded reasoning** ? every claim traceable to profile fields) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 233 Td
+(9. **JD-aligned weighting** ? production evidence at 28% reflects the JD's) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 209 Td
+(emphasis) Tj ET
+0.86 0.90 0.88 rg
+BT /F2 15 Tf 56 185 Td
+(10. **Deterministic & reproducible** ? no randomness, no external dependencies) Tj ET
+0.56 0.62 0.60 rg
+BT /F2 11 Tf 56 34 Td (RecruitAI | 11/11) Tj ET
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 25 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 23 0 R >>
+endobj
+25 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R] /Count 11 >>
+endobj
+26 0 obj
+<< /Type /Catalog /Pages 25 0 R >>
+endobj
+xref
+0 27
+0000000000 65535 f 
+0000000015 00000 n 
+0000000090 00000 n 
+0000000160 00000 n 
+0000000444 00000 n 
+0000000581 00000 n 
+0000001319 00000 n 
+0000001456 00000 n 
+0000002522 00000 n 
+0000002659 00000 n 
+0000004903 00000 n 
+0000005041 00000 n 
+0000006938 00000 n 
+0000007077 00000 n 
+0000008867 00000 n 
+0000009006 00000 n 
+0000010876 00000 n 
+0000011015 00000 n 
+0000012326 00000 n 
+0000012465 00000 n 
+0000013527 00000 n 
+0000013666 00000 n 
+0000014211 00000 n 
+0000014350 00000 n 
+0000016107 00000 n 
+0000016246 00000 n 
+0000016373 00000 n 
+trailer << /Size 27 /Root 26 0 R >>
+startxref
+16424
+%%EOF
